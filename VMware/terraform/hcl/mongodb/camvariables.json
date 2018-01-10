@@ -144,7 +144,7 @@
         "name": "dns_suffixes", 
         "label": "DNS Suffixes", 
         "description": "Name resolution suffixes for the virtual network adapter",
-        "default": ["isstlab.staines.uk.ibm.com"], 
+        "default": [], 
         "hidden": false, 
         "immutable": false, 
         "required": false, 
@@ -155,7 +155,7 @@
         "name": "dns_servers", 
         "label": "DNS Servers", 
         "description": "DNS servers for the virtual network adapter; Allow 0.0.0.0 to 255.255.255.255",
-        "default": ["9.180.210.16"], 
+        "default": [], 
         "hidden": false, 
         "immutable": false, 
         "required": false, 
@@ -214,7 +214,7 @@
         "required": true, 
         "secured": false, 
         "type": "string",
-        "default": 25
+        "default": 25,
         "regex": "^([8-9]|[1-2][0-9]|3[0-2])$"
     },
     {
@@ -232,12 +232,13 @@
         "name": "vm_template", 
         "label": "VM Template", 
         "description": "Source VM or Template label for cloning",
+	"default": "vt-ubuntu-svr-1604"
         "hidden": false, 
         "immutable": false, 
         "required": true, 
         "secured": false, 
-        "type": "string",
-	"default": "vt-ubuntu-svr-1604"
+        "type": "string"
+
     },
         "name": "ssh_user", 
         "label": "SSH User", 
