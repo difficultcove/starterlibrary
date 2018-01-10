@@ -15,7 +15,7 @@
         "name": "folder", 
         "label": "Folder", 
         "description": "Target vSphere folder for Virtual Machine", 
-        "default": "",
+        "default": "CAM",
         "hidden": false, 
         "immutable": false, 
         "required": true, 
@@ -26,7 +26,7 @@
         "name": "datacenter", 
         "label": "Datacenter", 
         "description": "Target vSphere datacenter for Virtual Machine creation",
-        "default": "", 
+        "default": "isstlab", 
         "hidden": false, 
         "immutable": false, 
         "required": true, 
@@ -133,7 +133,7 @@
         "name": "cluster", 
         "label": "Cluster", 
         "description": "Target vSphere Cluster to host the Virtual Machine",
-        "default": "", 
+        "default": "underground", 
         "hidden": false, 
         "immutable": false, 
         "required": true, 
@@ -144,7 +144,7 @@
         "name": "dns_suffixes", 
         "label": "DNS Suffixes", 
         "description": "Name resolution suffixes for the virtual network adapter",
-        "default": [], 
+        "default": ["isstlab.staines.uk.ibm.com"], 
         "hidden": false, 
         "immutable": false, 
         "required": false, 
@@ -155,7 +155,7 @@
         "name": "dns_servers", 
         "label": "DNS Servers", 
         "description": "DNS servers for the virtual network adapter; Allow 0.0.0.0 to 255.255.255.255",
-        "default": [], 
+        "default": ["9.180.210.16"], 
         "hidden": false, 
         "immutable": false, 
         "required": false, 
@@ -171,7 +171,17 @@
         "immutable": false, 
         "required": true, 
         "secured": false, 
-        "type": "string"
+        "type": "string",
+		"options": [
+         	{
+            	"value" : "NLAB_FRNT_0210",
+              	"label": "External - 9.180.210.x/25"
+          	},
+         	{
+            	"value" : "VLAB_MGMT_0019",
+              	"label": "Internal - 172.24.19.x/24"
+		}
+        ]	    
     },
     {
         "name": "ipv4_address", 
@@ -204,13 +214,14 @@
         "required": true, 
         "secured": false, 
         "type": "string",
+        "default": 25
         "regex": "^([8-9]|[1-2][0-9]|3[0-2])$"
     },
     {
         "name": "storage", 
         "label": "Storage", 
         "description": "Data store or storage cluster name for target VMs disks",
-        "default": "",
+        "default": "cluster03/ESX6-volume-01",
         "hidden": false, 
         "immutable": false, 
         "required": true, 
@@ -225,9 +236,9 @@
         "immutable": false, 
         "required": true, 
         "secured": false, 
-        "type": "string"
+        "type": "string",
+	"default": "vt-ubuntu-svr-1604"
     },
-    {
         "name": "ssh_user", 
         "label": "SSH User", 
         "description": "The user for ssh connection, which is default in template",
