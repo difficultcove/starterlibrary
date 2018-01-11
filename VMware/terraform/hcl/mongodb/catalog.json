@@ -1,5 +1,5 @@
 {
-   "name": "MongoDB on a Single VM",
+   "name": "MongoDB on a Single VM in CLSLab",
    "description": "MongoDB - An open-source cross-platform document-oriented database.",
    "version": "1.0.0.0",
    "type": "prebuilt",
@@ -20,7 +20,7 @@
      }
    },
    "metadata": {
-     "displayName": "MongoDB on a Single VM",
+     "displayName": "MongoDB on a Single VM in CLSLab",
      "longDescription": "Deploys a single node of MongoDB in VMware for development use, where MongoDB is an open-source cross-platform document-oriented database.",
      "bullets": [
        {
