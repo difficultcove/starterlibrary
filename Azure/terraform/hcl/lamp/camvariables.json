@@ -41,7 +41,23 @@
           {
               "value": "West Central US",
               "label": "West Central US"
-          }
+          },
+          {
+              "value": "UK South",
+              "label": "UK South"
+          },
+          {
+              "value": "UK West",
+              "label": "UK West"
+          },
+          {
+              "value": "West Europe",
+              "label": "West Europe"
+          },
+          {
+              "value": "North Europe",
+              "label": "North Europe"
+          }            
         ]
     }, 
     {
