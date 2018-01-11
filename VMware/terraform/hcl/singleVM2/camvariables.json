@@ -114,7 +114,7 @@
     "required": true,
     "secured": false,
     "type": "string",
-    "default": 24
+    "default": "24"
   },
   {
     "name": "storage",
@@ -167,7 +167,7 @@
     "name": "allow_selfsigned_cert",
     "label": "Allow selfsigned certificate",
     "description": "Communication with vsphere server with self signed certificate",
-    "default": "true",
+    "default": true,
     "hidden": false,
     "immutable": false,
     "required": true,
