@@ -250,9 +250,9 @@
       	   {
         	"value": "vt-w8str2sp1-64",
          	"label": "Windows 2008 Server R2 SP1"
-      	    }
+      	   }
     	]
-
+    {
     },
         "name": "ssh_user", 
         "label": "SSH User", 
