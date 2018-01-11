@@ -232,7 +232,7 @@
         "name": "vm_template", 
         "label": "VM Template", 
         "description": "Source VM or Template label for cloning",
-	"default": "vt-ubuntu-svr-1604"
+	"default": "vt-ubuntu-svr-1604",
         "hidden": false, 
         "immutable": false, 
         "required": true, 
