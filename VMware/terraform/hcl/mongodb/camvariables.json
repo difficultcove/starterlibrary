@@ -221,7 +221,7 @@
         "name": "storage", 
         "label": "Storage", 
         "description": "Data store or storage cluster name for target VMs disks",
-        "default": "cluster03/ESX6-volume-01",
+        "default": "cluster01/ESX6-volume-01",
         "hidden": false, 
         "immutable": false, 
         "required": true, 
@@ -237,7 +237,21 @@
         "immutable": false, 
         "required": true, 
         "secured": false, 
-        "type": "string"
+        "type": "string",
+    	"options": [
+     	   {
+        	"value": "vt-ubuntu-svr-1604",
+        	"label": "Ubuntu Server 16.04"
+      	   },
+           {
+        	"value": "vt-rhel73-svr",
+        	"label": "Red Hat Enterprise Linux Server 7.3"
+      	   },
+      	   {
+        	"value": "vt-w8str2sp1-64",
+         	"label": "Windows 2008 Server R2 SP1"
+      	    }
+    	]
 
     },
         "name": "ssh_user", 
