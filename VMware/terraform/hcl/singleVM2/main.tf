@@ -78,8 +78,7 @@ provider "vsphere" {
 resource "vsphere_folder" "folder_vm_1" {
   count         = "${var.create_vm_folder}"
   path          = "${var.folder}"
-  datacenter_id = "${data.vsphere_datacenter.datacenter.id}"
-  type          = "vm"
+  datacenter    = "${var.datacenter}"
 }
 
 #
