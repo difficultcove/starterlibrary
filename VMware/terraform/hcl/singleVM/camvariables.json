@@ -2,7 +2,7 @@
   {
     "name": "name",
     "label": "Hostname",
-    "description": "Name of the Virtual Machine",
+    "description": "HostName of the Virtual Machine",
     "hidden": false,
     "immutable": false,
     "required": true,
