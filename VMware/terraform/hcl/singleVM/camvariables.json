@@ -13,7 +13,7 @@
     "name": "folder",
     "label": "Folder",
     "description": "Target VM vSphere folder for Virtual Machine",
-    "default": "CAM",
+    "default": "Demo",
     "hidden": false,
     "immutable": false,
     "required": true,
