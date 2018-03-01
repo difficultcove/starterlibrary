@@ -26,11 +26,11 @@ variable "memory" {
 
 variable "cluster" {
 	description = "Target vSphere Cluster to host the Virtual Machine"
-	default = "" 
+	default = ""
 }
 
 variable "network_label" {
-	description = "vSphere Port Group or Network label for Virtual Machine's vNIC" 
+	description = "vSphere Port Group or Network label for Virtual Machine's vNIC"
 }
 
 variable "ipv4_address" {
@@ -61,14 +61,14 @@ variable "create_vm_folder" {
 
 variable "allow_selfsigned_cert" {
     description = "Communication with vsphere server with self signed certificate"
-    default = false
+    default = true
 }
 
 ############### Optinal settings in provider ##########
 provider "vsphere" {
     allow_unverified_ssl = "${var.allow_selfsigned_cert}"
 }
- 
+
 
 ################## Resources ###############################
 
@@ -83,13 +83,13 @@ resource "vsphere_folder" "folder_vm_1" {
 
 
 #
-# Create VM with single vnic on a network label by cloning 
+# Create VM with single vnic on a network label by cloning
 #
 resource "vsphere_virtual_machine" "vm_1" {
   depends_on = ["vsphere_folder.folder_vm_1"]
   name   = "${var.name}"
   folder = "${var.folder}"
-  datacenter = "${var.datacenter}" 
+  datacenter = "${var.datacenter}"
   vcpu   = "${var.vcpu}"
   memory = "${var.memory}"
   cluster = "${var.cluster}"
